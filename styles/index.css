@@ -70,7 +70,7 @@ body .button:hover:disabled, body main > div:last-child form button:hover:disabl
   box-shadow: none;
 }
 body main {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   bottom: 0;
