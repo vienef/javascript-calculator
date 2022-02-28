@@ -186,9 +186,9 @@ body {
 
       > div:last-child {
         display: none;
-        height: 70%;
+        height: 70vh;
         position: absolute;
-        top: calc(30% + 1rem * 0.25);
+        top: calc(30vh + 1rem * 0.25);
         background: rgb(78, 81, 79);
 
         h2 { display: none; }
