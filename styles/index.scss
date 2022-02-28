@@ -51,10 +51,7 @@ body {
   .button:hover:disabled { box-shadow: none; }
 
   main {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+    height: 100vh;
     overflow: hidden;
 
     picture {
@@ -191,7 +188,7 @@ body {
         display: none;
         height: 70%;
         position: absolute;
-        top: calc(30% + 0.25rem);
+        top: calc(30% + 1rem * 0.25);
         background: rgb(78, 81, 79);
 
         h2 { display: none; }
