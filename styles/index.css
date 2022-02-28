@@ -188,7 +188,7 @@ body main > div:last-child form button {
     display: none;
     height: 70%;
     position: absolute;
-    bottom: 0;
+    top: calc(30% + 0.25rem);
     background: #4e514f;
   }
   body main > div:last-child h2 {
