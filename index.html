@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple JavaScript Calculator built with HTML, Bootstrap, SCSS, and jQuery by vienef. This calculator uses immediate execution logic as its input logic.">
+    <meta charset="utf-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Standard JavaScript Calculator</title>
+
+    <script src="https://kit.fontawesome.com/c74bcd6bde.js" crossorigin="anonymous" defer></script>
+  </head>
+
+  <body class="container-fluid">
+    <main class="row gap-1">
+      <picture class="col p-0" aria-hidden="true">
+        <source srcset="images/leaf_av1.avif" type="image/avif">
+        <source srcset="images/leaf_web.webp" type="image/webp">
+        <img src="images/leaf_portable.png" alt="" height="900" width="1200">
+      </picture> <!-- Background -->
+
+      <div class="col col-md-9 gap-1 m-1 me-md-0 me-sm-1 p-0">
+        <div class="p-md-3 p-2">
+          <h1 class="m-0">Standard JavaScript Calculator</h1>
+          <p class="m-0" id="equation"></p> <!-- Dynamic content -->
+          <p class="m-0" id="display">0</p> <!-- Dynamic content -->
+          <form class="m-0" action="" method="get">
+            <button class="p-2" type="submit" id="history"><i class="fas fa-history"></i></button>
+          </form> <!-- Responsive visibility -->
+        </div> <!-- Display -->
+
+        <form class="row gap-1 m-0 p-0" action="" method="get">
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-cool-gray" type="submit" id="percent">%</button>
+            <button class="col color-cool-gray" type="submit" id="clear-number">CE</button>
+            <button class="col color-cool-gray" type="submit" id="clear">C</button>
+            <button class="col color-cool-gray" type="submit" id="backspace">BS</button>
+          </div>
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-cool-gray" type="submit" id="fraction"><sup>1</sup>/<sub>x</sub></button>
+            <button class="col color-cool-gray" type="submit" id="square">x<sup>2</sup></button>
+            <button class="col color-cool-gray" type="submit" id="square-root">√x</button>
+            <button class="col color-cool-gray" type="submit" id="divide">÷</button>
+          </div>
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-forest-green" type="submit" id="seven">7</button>
+            <button class="col color-forest-green" type="submit" id="eight">8</button>
+            <button class="col color-forest-green" type="submit" id="nine">9</button>
+            <button class="col color-cool-gray" type="submit" id="multiply">x</button>
+          </div>
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-forest-green" type="submit" id="four">4</button>
+            <button class="col color-forest-green" type="submit" id="five">5</button>
+            <button class="col color-forest-green" type="submit" id="six">6</button>
+            <button class="col color-cool-gray" type="submit" id="subtract">-</button>
+          </div>
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-forest-green" type="submit" id="one">1</button>
+            <button class="col color-forest-green" type="submit" id="two">2</button>
+            <button class="col color-forest-green" type="submit" id="three">3</button>
+            <button class="col color-cool-gray" type="submit" id="add">+</button>
+          </div>
+          <div class="row gap-1 m-0 p-0">
+            <button class="col color-forest-green" type="submit" id="negate"><sup>+</sup>/<sub>-</sub></button>
+            <button class="col color-forest-green" type="submit" id="zero">0</button>
+            <button class="col color-forest-green" type="submit" id="decimal">.</button>
+            <button class="col color-emerald-green" type="submit" id="equals">=</button>
+          </div>
+        </form> <!-- Input buttons -->
+      </div>
+
+      <div class="col m-md-1 ms-md-0 m-sm-0 p-3">
+        <h2 class="m-0">History</h2>
+        <ul class="m-0 p-0">
+          <li class="m-3 m-md-0 mt-md-3" id="initial-history">There's no history yet</li>
+        </ul> <!-- Dynamic content -->
+        <form class="m-0" action="" method="get">
+          <button class="p-2" type="submit" id="clear-history"><i class="far fa-trash-alt"></i></button>
+        </form> <!-- Responsive visibility -->
+      </div> <!-- History / Responsive visibility -->
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="scripts/index.js" type="module" defer></script>
+  </body>
+</html>

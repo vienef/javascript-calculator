@@ -1,0 +1,202 @@
+$transparency: 0.5;
+$base-size: 5vh;
+$slate: rgb(233, 237, 233);
+$colors: (
+  'emerald-green': rgba(4, 197, 107, $transparency),
+  'forest-green': rgba(25, 54, 44, $transparency),
+  'cool-gray': rgba(78, 81, 79, $transparency)
+);
+
+@each $color, $value in $colors {
+  .color-#{$color} { background: $value; }
+
+  .color-#{$color}:focus,
+  .color-#{$color}:hover { box-shadow: 0 0 calc($base-size / 2.5) inset #0A0A0A; }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  color: #{$slate};
+  font: 400 calc(#{$base-size} / 2.5)/1 'Teko', sans-serif;
+  text-shadow: 0 0 calc(#{$base-size} / 5) #{$slate};
+  background: #0A0A0A;
+  overflow: hidden;
+  user-select: none;
+
+  .button {
+    color: inherit;
+    text-shadow: inherit;
+    border: none;
+    border-radius: inherit;
+  }
+
+  .button:focus { outline: none; }
+
+  .button:disabled { opacity: 0.5; }
+  
+  .button:hover:disabled { box-shadow: none; }
+
+  main {
+    height: 100vh;
+    overflow: hidden;
+
+    picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.25;
+
+      img {
+        min-height: 100%;
+        min-width: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+      }
+    }
+
+    div { border-radius: calc(#{$base-size} / 10); }
+
+    > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+
+      > div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30%;
+        text-align: right;
+
+        h1 {
+          font-weight: 700;
+          font-size: calc(#{$base-size} / 1.5);
+          text-align: left;
+        }
+
+        p:first-of-type {
+          align-self: flex-end;
+          min-height: calc(#{$base-size} / 2.5);
+        }
+
+        p:last-of-type {
+          font-weight: 700;
+          font-size: calc(#{$base-size} * 1.5);
+        }
+
+        form {
+          display: none;
+          font-size: calc(#{$base-size} / 1.5);
+          text-align: left;
+          border-radius: inherit;
+
+          button {
+            @extend .button;
+            background: none;
+          }
+
+          button:hover,
+          button:focus { @extend .color-cool-gray; }
+        }
+      }
+      
+      > form {
+        height: 70%;
+        font-size: calc(#{$base-size} / 1.25);
+        border-radius: inherit;
+
+        button {
+          @extend .button;
+          font-weight: 700;
+          backdrop-filter: blur(calc(#{$base-size} / 5));
+        }
+      }
+    }
+
+    > div:last-child {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      h2 {
+        font-weight: 700;
+        font-size: inherit;
+      }
+
+      ul {
+        height: 85vh;
+        text-align: right;
+        overflow-y: auto;
+
+        #initial-history { text-align: left; }
+
+        li {
+          display: block;
+          animation: fade-in .5s ease-out;
+          
+          span { font-size: calc(#{$base-size} / 1.5); }
+        }
+      }
+
+      ul::-webkit-scrollbar { width: 0.5vh; }
+
+      ul::-webkit-scrollbar-thumb {
+        background: #{$slate};
+        border-radius: 0.25vh;
+      }
+
+      form {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        font-size: calc(#{$base-size} / 2);
+        text-align: right;
+        border-radius: inherit;
+        visibility: hidden;
+
+        button {
+          @extend .button;
+          background: none;
+        }
+
+        button:hover,
+        button:focus { @extend .color-cool-gray; }
+      }
+    }
+
+    @media only screen and (orientation: portrait) {
+      > div:nth-child(2) { > div:first-child { form { display: block; } } }
+
+      > div:last-child {
+        display: none;
+        height: 70%;
+        position: absolute;
+        bottom: 0;
+        background: rgb(78, 81, 79);
+
+        h2 { display: none; }
+
+        ul { height: 90%; }
+      }
+    }
+  }
+}
+
+@keyframes fade-in { from { opacity: 0; } }

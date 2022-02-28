@@ -1,0 +1,205 @@
+.color-emerald-green {
+  background: rgba(4, 197, 107, 0.5);
+}
+
+.color-emerald-green:focus,
+.color-emerald-green:hover {
+  box-shadow: 0 0 2vh inset #0A0A0A;
+}
+
+.color-forest-green {
+  background: rgba(25, 54, 44, 0.5);
+}
+
+.color-forest-green:focus,
+.color-forest-green:hover {
+  box-shadow: 0 0 2vh inset #0A0A0A;
+}
+
+.color-cool-gray, body main > div:last-child form button:hover,
+body main > div:last-child form button:focus, body main > div:nth-child(2) > div:first-child form button:hover,
+body main > div:nth-child(2) > div:first-child form button:focus {
+  background: rgba(78, 81, 79, 0.5);
+}
+
+.color-cool-gray:focus, body main > div:last-child form button:focus:hover,
+body main > div:last-child form button:focus,
+body main > div:nth-child(2) > div:first-child form button:focus,
+.color-cool-gray:hover,
+body main > div:last-child form button:hover,
+body main > div:nth-child(2) > div:first-child form button:hover {
+  box-shadow: 0 0 2vh inset #0A0A0A;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
+  color: #e9ede9;
+  font: 400 calc(5vh / 2.5)/1 "Teko", sans-serif;
+  text-shadow: 0 0 calc(5vh / 5) #e9ede9;
+  background: #0A0A0A;
+  overflow: hidden;
+  user-select: none;
+}
+body .button, body main > div:last-child form button, body main > div:nth-child(2) > form button, body main > div:nth-child(2) > div:first-child form button {
+  color: inherit;
+  text-shadow: inherit;
+  border: none;
+  border-radius: inherit;
+}
+body .button:focus, body main > div:last-child form button:focus, body main > div:nth-child(2) > form button:focus, body main > div:nth-child(2) > div:first-child form button:focus {
+  outline: none;
+}
+body .button:disabled, body main > div:last-child form button:disabled, body main > div:nth-child(2) > form button:disabled, body main > div:nth-child(2) > div:first-child form button:disabled {
+  opacity: 0.5;
+}
+body .button:hover:disabled, body main > div:last-child form button:hover:disabled, body main > div:nth-child(2) > form button:hover:disabled {
+  box-shadow: none;
+}
+body main {
+  height: 100vh;
+  overflow: hidden;
+}
+body main picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.25;
+}
+body main picture img {
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+body main div {
+  border-radius: calc(5vh / 10);
+}
+body main > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+body main > div:nth-child(2) > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30%;
+  text-align: right;
+}
+body main > div:nth-child(2) > div:first-child h1 {
+  font-weight: 700;
+  font-size: calc(5vh / 1.5);
+  text-align: left;
+}
+body main > div:nth-child(2) > div:first-child p:first-of-type {
+  align-self: flex-end;
+  min-height: calc(5vh / 2.5);
+}
+body main > div:nth-child(2) > div:first-child p:last-of-type {
+  font-weight: 700;
+  font-size: calc(5vh * 1.5);
+}
+body main > div:nth-child(2) > div:first-child form {
+  display: none;
+  font-size: calc(5vh / 1.5);
+  text-align: left;
+  border-radius: inherit;
+}
+body main > div:nth-child(2) > div:first-child form button {
+  background: none;
+}
+body main > div:nth-child(2) > form {
+  height: 70%;
+  font-size: calc(5vh / 1.25);
+  border-radius: inherit;
+}
+body main > div:nth-child(2) > form button {
+  font-weight: 700;
+  backdrop-filter: blur(calc(5vh / 5));
+}
+body main > div:last-child {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body main > div:last-child h2 {
+  font-weight: 700;
+  font-size: inherit;
+}
+body main > div:last-child ul {
+  height: 85vh;
+  text-align: right;
+  overflow-y: auto;
+}
+body main > div:last-child ul #initial-history {
+  text-align: left;
+}
+body main > div:last-child ul li {
+  display: block;
+  animation: fade-in 0.5s ease-out;
+}
+body main > div:last-child ul li span {
+  font-size: calc(5vh / 1.5);
+}
+body main > div:last-child ul::-webkit-scrollbar {
+  width: 0.5vh;
+}
+body main > div:last-child ul::-webkit-scrollbar-thumb {
+  background: #e9ede9;
+  border-radius: 0.25vh;
+}
+body main > div:last-child form {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: calc(5vh / 2);
+  text-align: right;
+  border-radius: inherit;
+  visibility: hidden;
+}
+body main > div:last-child form button {
+  background: none;
+}
+@media only screen and (orientation: portrait) {
+  body main > div:nth-child(2) > div:first-child form {
+    display: block;
+  }
+  body main > div:last-child {
+    display: none;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    background: #4e514f;
+  }
+  body main > div:last-child h2 {
+    display: none;
+  }
+  body main > div:last-child ul {
+    height: 90%;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
