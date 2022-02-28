@@ -27,9 +27,9 @@ html {
 }
 
 body {
-  max-height: 100vh;
-  max-height: fill-available;
-  max-height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   color: #{$slate};
   font: 400 calc(#{$base-size} / 2.5)/1 'Teko', sans-serif;
   text-shadow: 0 0 calc(#{$base-size} / 5) #{$slate};
