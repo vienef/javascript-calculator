@@ -39,13 +39,13 @@ body main > div:nth-child(2) > div:first-child form button:hover {
 }
 
 html {
-  height: fill-available;
+  height: stretch;
   height: -webkit-fill-available;
 }
 
 body {
   min-height: 100vh;
-  min-height: fill-available;
+  min-height: stretch;
   min-height: -webkit-fill-available;
   color: #e9ede9;
   font: 400 calc(5vh / 2.5)/1 "Teko", sans-serif;

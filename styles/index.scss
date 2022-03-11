@@ -22,13 +22,13 @@ $colors: (
 }
 
 html {
-  height: fill-available;
+  height: stretch;
   height: -webkit-fill-available;
 }
 
 body {
   min-height: 100vh;
-  min-height: fill-available;
+  min-height: stretch;
   min-height: -webkit-fill-available;
   color: #{$slate};
   font: 400 calc(#{$base-size} / 2.5)/1 'Teko', sans-serif;

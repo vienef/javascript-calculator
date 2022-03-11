@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A simple JavaScript Calculator built with HTML, Bootstrap, SCSS, and jQuery by vienef. This calculator uses immediate execution logic as its input logic.">
-    <meta charset="utf-8">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Teko:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="styles/index.css">
 
     <title>Standard JavaScript Calculator</title>
-
-    <script src="https://kit.fontawesome.com/c74bcd6bde.js" crossorigin="anonymous" defer></script>
   </head>
 
   <body class="container-fluid">
     <main class="row gap-1">
       <picture class="col p-0" aria-hidden="true">
-        <source srcset="images/leaf_av1.avif" type="image/avif">
-        <source srcset="images/leaf_web.webp" type="image/webp">
-        <img src="images/leaf_portable.png" alt="" height="900" width="1200">
+        <source srcset="images/leaf.avif" type="image/avif">
+        <source srcset="images/leaf.webp" type="image/webp">
+        <img src="images/leaf.png" alt="" height="900" width="1200">
       </picture> <!-- Background -->
 
       <div class="col col-md-9 gap-1 m-1 me-md-0 me-sm-1 p-0">
@@ -30,7 +28,7 @@
           <p class="m-0" id="equation"></p> <!-- Dynamic content -->
           <p class="m-0" id="display">0</p> <!-- Dynamic content -->
           <form class="m-0" action="" method="get">
-            <button class="p-2" type="submit" id="history"><i class="fas fa-history"></i></button>
+            <button class="p-2" type="submit" id="history" title="view history"><i class="fas fa-history"></i></button>
           </form> <!-- Responsive visibility -->
         </div> <!-- Display -->
 
@@ -80,12 +78,13 @@
           <li class="m-3 m-md-0 mt-md-3" id="initial-history">There's no history yet</li>
         </ul> <!-- Dynamic content -->
         <form class="m-0" action="" method="get">
-          <button class="p-2" type="submit" id="clear-history"><i class="far fa-trash-alt"></i></button>
+          <button class="p-2" type="submit" id="clear-history" title="clear history"><i class="far fa-trash-alt"></i></button>
         </form> <!-- Responsive visibility -->
       </div> <!-- History / Responsive visibility -->
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <script src="https://kit.fontawesome.com/c74bcd6bde.js" crossorigin="anonymous" defer></script>
     <script src="scripts/index.js" type="module" defer></script>
   </body>
 </html>
