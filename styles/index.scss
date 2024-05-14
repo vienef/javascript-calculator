@@ -21,15 +21,7 @@ $colors: (
   line-height: 1;
 }
 
-html {
-  height: stretch;
-  height: -webkit-fill-available;
-}
-
 body {
-  min-height: 100vh;
-  min-height: stretch;
-  min-height: -webkit-fill-available;
   color: #{$slate};
   font: 400 calc(#{$base-size} / 2.5)/1 'Teko', sans-serif;
   text-shadow: 0 0 calc(#{$base-size} / 5) #{$slate};
@@ -51,7 +43,7 @@ body {
   .button:hover:disabled { box-shadow: none; }
 
   main {
-    min-height: 100vh;
+    height: 100vh;
     overflow: hidden;
 
     picture {
