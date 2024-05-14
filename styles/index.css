@@ -38,15 +38,7 @@ body main > div:nth-child(2) > div:first-child form button:hover {
   line-height: 1;
 }
 
-html {
-  height: stretch;
-  height: -webkit-fill-available;
-}
-
 body {
-  min-height: 100vh;
-  min-height: stretch;
-  min-height: -webkit-fill-available;
   color: #e9ede9;
   font: 400 calc(5vh / 2.5)/1 "Teko", sans-serif;
   text-shadow: 0 0 calc(5vh / 5) #e9ede9;
@@ -70,7 +62,7 @@ body .button:hover:disabled, body main > div:last-child form button:hover:disabl
   box-shadow: none;
 }
 body main {
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
 }
 body main picture {
