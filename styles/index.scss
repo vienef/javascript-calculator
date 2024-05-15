@@ -26,7 +26,6 @@ body {
   font: 400 calc(#{$base-size} / 2.5)/1 'Teko', sans-serif;
   text-shadow: 0 0 calc(#{$base-size} / 5) #{$slate};
   background: #0A0A0A;
-  overflow: hidden;
   user-select: none;
 
   .button {
