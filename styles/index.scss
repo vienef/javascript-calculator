@@ -53,6 +53,7 @@ body {
       position: absolute;
       z-index: -1;
       opacity: 0.25;
+      overflow: hidden;
 
       img {
         min-height: 100%;
