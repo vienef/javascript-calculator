@@ -43,7 +43,6 @@ body {
   font: 400 calc(5vh / 2.5)/1 "Teko", sans-serif;
   text-shadow: 0 0 calc(5vh / 5) #e9ede9;
   background: #0A0A0A;
-  overflow: hidden;
   user-select: none;
 }
 body .button, body main > div:last-child form button, body main > div:nth-child(2) > form button, body main > div:nth-child(2) > div:first-child form button {
