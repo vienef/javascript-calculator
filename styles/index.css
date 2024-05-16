@@ -62,6 +62,7 @@ body .button:hover:disabled, body main > div:last-child form button:hover:disabl
 }
 body main {
   height: 100vh;
+  position: relative;
   overflow: hidden;
 }
 body main picture {
