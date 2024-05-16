@@ -184,7 +184,7 @@ body main > div:last-child form button {
     display: none;
   }
   body main > div:last-child ul {
-    height: 90%;
+    height: 100%;
   }
 }
 
